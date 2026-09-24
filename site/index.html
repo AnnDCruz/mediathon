@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>If My University Was a Small Town — a photographic story</title>
+  <meta name="description" content="A photographic story: one day in the small town that is my university, from morning to evening.">
+  <meta name="theme-color" content="#E8E3D8">
+
+  <!-- Inline favicon (a roundabout) so the browser never requests a missing favicon.ico -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%238A3F32' stroke-width='3'/%3E%3C/svg%3E">
+
+  <!-- Marks the page as JS-enabled so scroll-reveal styles only apply when the script can reveal them -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip-link" href="#gate">Skip the opening</a>
+
+<!-- ==========================================================
+     CHROME — the only "navigation": a project mark, a town clock
+     with the current chapter, and a bus route down the right edge.
+     Its colours flip between light and dark to stay legible.
+     ========================================================== -->
+<div class="chrome" id="chrome">
+  <p class="chrome__title mono" data-zone="top">If my university was a small town</p>
+
+  <div class="hud" data-zone="bottom" aria-hidden="true">
+    <span class="hud__time mono" id="hudTime">07:30</span>
+    <span class="hud__chapter" id="hudChapter">
+      <span class="hud__num mono" id="hudNum">Prologue</span>
+      <span class="hud__name" id="hudName">The Roundabout</span>
+    </span>
+  </div>
+
+  <nav class="route" id="route" data-zone="mid" aria-label="Chapters">
+    <ol class="route__list">
+      <li class="route__stop" style="--i:0"><a href="#top" aria-label="Prologue: The Roundabout"><span class="route__label">The Roundabout</span></a></li>
+      <li class="route__stop" style="--i:1"><a href="#gate" aria-label="Chapter I: The Gate"><span class="route__label">I · The Gate</span></a></li>
+      <li class="route__stop" style="--i:2"><a href="#market-road" aria-label="Chapter II: Market Road"><span class="route__label">II · Market Road</span></a></li>
+      <li class="route__stop" style="--i:3"><a href="#town-hall" aria-label="Chapter III: The Town Hall"><span class="route__label">III · The Town Hall</span></a></li>
+      <li class="route__stop" style="--i:4"><a href="#stadium" aria-label="Chapter IV: The Stadium"><span class="route__label">IV · The Stadium</span></a></li>
+      <li class="route__stop" style="--i:5"><a href="#gossip-corner" aria-label="Chapter V: Gossip Corner"><span class="route__label">V · Gossip Corner</span></a></li>
+      <li class="route__stop" style="--i:6"><a href="#bazaar-stall" aria-label="Chapter VI: The Bazaar Stall"><span class="route__label">VI · The Bazaar Stall</span></a></li>
+      <li class="route__stop" style="--i:7"><a href="#bulletin-board" aria-label="Chapter VII: The Bulletin Board"><span class="route__label">VII · The Bulletin Board</span></a></li>
+      <li class="route__stop" style="--i:8"><a href="#colonnade" aria-label="Chapter VIII: The Colonnade"><span class="route__label">VIII · The Colonnade</span></a></li>
+      <li class="route__stop" style="--i:9"><a href="#last-bus" aria-label="Chapter IX: The Last Bus"><span class="route__label">IX · The Last Bus</span></a></li>
+    </ol>
+    <span class="route__bus" aria-hidden="true"></span>
+  </nav>
+</div>
+
+
+<!-- ==========================================================
+     OPENING + PROLOGUE — THE ROUNDABOUT
+     A tall "scene": the stage stays pinned while scroll drives a
+     circular iris (a roundabout) that opens from the title into
+     the first photograph. The scene's --p (0→1) is set by script.js.
+     ========================================================== -->
+<header class="opening scene" id="top" data-scene="sticky"
+        data-chapter="Prologue" data-name="The Roundabout"
+        data-time="07:30" data-time-at="0"
+        data-tone="dark" data-tone-from="0.65">
+  <div class="scene__stage opening__stage">
+
+    <div class="opening__title">
+      <h1 class="opening__h1">
+        <span>If my university</span>
+        <span>was a small town</span>
+      </h1>
+      <p class="opening__sub mono">A photographic story</p>
+      <p class="opening__cue mono" aria-hidden="true">Scroll to enter</p>
+    </div>
+
+    <div class="opening__iris">
+      <figure class="photo photo--dark photo--scrim r-full" data-photo="roundabout" data-priority
+              data-label="Roundabout photograph" data-spec="Full-bleed · 16 : 9 · 2560 × 1440 px">
+        <div class="photo__media"></div>
+      </figure>
+      <p class="line line--scrub line--onphoto opening__line">From above, the town looks smaller than it really is.</p>
+    </div>
+
+  </div>
+  <h2 class="sr-only">Prologue — The Roundabout</h2>
+</header>
+
+
+<main id="story">
+
+  <!-- Prologue continues: the town seen from above, before anyone is in it -->
+  <div class="prologue-rest">
+    <div class="space space--lg"></div>
+
+    <div class="beat beat--center">
+      <p class="line">Nobody remembers when the day actually started.</p>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat">
+      <div class="overlap">
+        <figure class="photo r-4x3 overlap__a" data-photo="campus-surround" data-reveal="wipe-right"
+                data-label="Surrounding campus photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="0.7"></div>
+        </figure>
+        <figure class="photo r-3x4 overlap__b" data-photo="aerial-palms" data-reveal="wipe-up"
+                data-label="Aerial view over palms photograph" data-spec="3 : 4 · 1800 × 2400 px">
+          <div class="photo__media" data-parallax="-0.8"></div>
+        </figure>
+        <p class="line line--sm overlap__line">The palms are the only residents who never leave.</p>
+      </div>
+    </div>
+
+    <div class="space space--xl"></div>
+  </div>
+
+
+  <!-- ========================================================
+       I — THE GATE
+       The morning begins; the town wakes up.
+       ======================================================== -->
+  <section class="chapter" id="gate" data-chapter="I" data-name="The Gate" aria-labelledby="h-gate">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-gate" data-reveal="fade">
+        <span class="chapter-mark__num mono">I</span>
+        <span class="chapter-mark__name">The Gate</span>
+      </h2>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat">
+      <p class="line line--narrow">Every town has a way in.</p>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat">
+      <div class="duo">
+        <div class="duo__small">
+          <p class="line line--sm">The name is on the wall before you’ve taken three steps in.</p>
+          <figure class="photo r-3x4" data-photo="gate-sign" data-reveal="wipe-up"
+                  data-label="Gate sign photograph" data-spec="3 : 4 · 1800 × 2400 px">
+            <div class="photo__media" data-parallax="0.6"></div>
+          </figure>
+        </div>
+        <figure class="photo r-4x3" data-photo="atrium" data-reveal="wipe-left"
+                data-label="Atrium photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="-0.6"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="space space--lg"></div>
+
+    <div class="beat">
+      <p class="line" data-time="09:00">By nine, the town has already started moving.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <!-- a moment with no text: the atrium, wide, drifting slowly sideways -->
+    <figure class="photo photo--pan r-tall" data-photo="atrium-wide" data-reveal="wipe-right"
+            data-label="Atrium wide photograph" data-spec="Full-bleed · 16 : 9 · 2560 × 1440 px">
+      <div class="photo__media" data-pan="5"></div>
+    </figure>
+
+    <div class="space space--md"></div>
+  </section>
+
+
+  <!-- ========================================================
+       II — MARKET ROAD   (fast: short gaps, quick reveals)
+       Not about food. About the fifteen minutes between classes.
+       ======================================================== -->
+  <section class="chapter" id="market-road" data-chapter="II" data-name="Market Road" data-pace="fast" aria-labelledby="h-market">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-market" data-reveal="fade">
+        <span class="chapter-mark__num mono">II</span>
+        <span class="chapter-mark__name">Market Road</span>
+      </h2>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat beat--center">
+      <p class="line" data-time="09:55">The first stop is never planned.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat">
+      <figure class="photo r-16x10 frame-center" data-photo="canteen-fridge" data-reveal="wipe-up"
+              data-label="Canteen fridge photograph" data-spec="16 : 10 · 2400 × 1500 px">
+        <div class="photo__media" data-parallax="0.6"></div>
+      </figure>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat beat--center">
+      <p class="line line--sm">Market Road doesn’t sell anything you need.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat">
+      <div class="pair">
+        <figure class="photo r-4x3" data-photo="food-stall" data-reveal="wipe-right" data-drift="-34"
+                data-label="Red-tented food stall photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="0.5"></div>
+        </figure>
+        <figure class="photo r-4x3" data-photo="foosball" data-reveal="wipe-left" data-drift="34"
+                data-label="Foosball table photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="-0.5"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat beat--center">
+      <p class="line line--sm" data-time="10:25">It sells fifteen minutes between one class and the next.</p>
+    </div>
+    <div class="beat beat--center">
+      <p class="line line--sm line--soft line--it">And business is always good.</p>
+    </div>
+
+    <div class="space space--lg"></div>
+  </section>
+
+
+  <!-- ========================================================
+       III — THE TOWN HALL   (sticky cinematic scene)
+       The atrium is pinned; three lines cross it as you scroll.
+       ======================================================== -->
+  <section class="chapter" id="town-hall" data-chapter="III" data-name="The Town Hall" data-pace="fast" aria-labelledby="h-hall">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-hall" data-reveal="fade">
+        <span class="chapter-mark__num mono">III</span>
+        <span class="chapter-mark__name">The Town Hall</span>
+      </h2>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="scene scene--hall" data-scene="sticky" data-tone="dark" data-time="10:45" data-time-at="0">
+      <div class="scene__stage">
+        <figure class="photo photo--dark photo--scrim photo--scrim-deep r-full" data-photo="town-hall-banners"
+                data-label="Town hall banners photograph" data-spec="Full-bleed · 16 : 9 · 2560 × 1440 px">
+          <div class="photo__media"></div>
+        </figure>
+      </div>
+      <p class="line line--onphoto hall__line hall__line--1" data-drift="-46">Someone is late.</p>
+      <p class="line line--onphoto hall__line hall__line--2" data-drift="46">Someone is always late.</p>
+      <p class="line line--onphoto hall__line hall__line--3" data-drift="-46">The market is open.</p>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat">
+      <div class="cluster cluster--hall">
+        <figure class="photo r-2x3 cluster__a" data-photo="stairs-crowd" data-reveal="wipe-up"
+                data-label="Stairs and crowd photograph" data-spec="2 : 3 · 1600 × 2400 px">
+          <div class="photo__media" data-parallax="0.6"></div>
+        </figure>
+        <figure class="photo r-4x3 cluster__b" data-photo="wide-hall" data-reveal="wipe-left"
+                data-label="Wide atrium hall photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="-0.5"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat beat--center">
+      <p class="line line--sm line--soft line--it">Nobody is buying anything.</p>
+    </div>
+
+    <div class="space space--lg"></div>
+  </section>
+
+
+  <!-- ========================================================
+       IV — THE STADIUM   (the loudest chapter: cuts, not dissolves)
+       ======================================================== -->
+  <section class="chapter" id="stadium" data-chapter="IV" data-name="The Stadium" data-pace="fast" aria-labelledby="h-stadium">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-stadium" data-reveal="fade">
+        <span class="chapter-mark__num mono">IV</span>
+        <span class="chapter-mark__name">The Stadium</span>
+      </h2>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat beat--center">
+      <p class="line" data-time="11:30">The match has started.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat">
+      <figure class="photo r-16x9 r-16x9--stadium" data-photo="badminton-hall" data-reveal="wipe-right"
+              data-label="Badminton hall photograph" data-spec="16 : 9 · 2560 × 1440 px">
+        <div class="photo__media" data-parallax="0.5"></div>
+      </figure>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat beat--right">
+      <p class="line line--sm">Once a year, everyone remembers they know how to play.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <!-- the match itself: edge to edge, panning sideways like a camera following the rally -->
+    <figure class="photo photo--pan r-21x9 r-21x9--match" data-photo="badminton-match" data-reveal="wipe-left"
+            data-label="Badminton match photograph" data-spec="21 : 9 · 2800 × 1200 px">
+      <div class="photo__media" data-pan="-5"></div>
+    </figure>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat beat--center">
+      <p class="line">Now everyone cares about the score.</p>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat">
+      <div class="stands">
+        <figure class="photo r-4x3 stands__banner" data-photo="bsf-banner" data-reveal="wipe-up"
+                data-label="BSF 2025 banner photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="0.6"></div>
+        </figure>
+        <figure class="photo r-2x3 stands__chairs" data-photo="folding-chairs" data-reveal="wipe-down"
+                data-label="Folding chairs photograph" data-spec="2 : 3 · 1600 × 2400 px">
+          <div class="photo__media" data-parallax="-0.6"></div>
+        </figure>
+        <p class="line line--sm stands__line" data-time="12:00">By noon, nobody remembers why they came outside.</p>
+        <figure class="photo r-4x3 stands__crowd" data-photo="spectators" data-reveal="wipe-right"
+                data-label="Spectators photograph" data-spec="4 : 3 · 2400 × 1800 px">
+          <div class="photo__media" data-parallax="0.5"></div>
+        </figure>
+      </div>
+    </div>
+
+    <!-- the town exhales: a long gap before the quiet half of the day -->
+    <div class="space space--xl"></div>
+    <div class="space space--lg"></div>
+  </section>
+
+
+  <!-- ========================================================
+       V — GOSSIP CORNER   (slow, intimate: dissolves, long gaps)
+       ======================================================== -->
+  <section class="chapter" id="gossip-corner" data-chapter="V" data-name="Gossip Corner" data-pace="slow" aria-labelledby="h-gossip">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-gossip" data-reveal="fade">
+        <span class="chapter-mark__num mono">V</span>
+        <span class="chapter-mark__name">Gossip Corner</span>
+      </h2>
+    </div>
+
+    <div class="space space--lg"></div>
+
+    <div class="beat beat--center">
+      <p class="line" data-time="13:10">Every town has a step where people stay longer than they planned.</p>
+    </div>
+
+    <div class="space space--lg"></div>
+
+    <div class="beat">
+      <div class="gossip">
+        <figure class="photo r-4x5 gossip__photo" data-photo="steps-talking" data-reveal="fade"
+                data-label="Steps — two people talking photograph" data-spec="4 : 5 · 1600 × 2000 px">
+          <div class="photo__media"></div>
+        </figure>
+        <p class="line line--sm line--soft gossip__line">News travels faster when nobody is trying to spread it.</p>
+      </div>
+    </div>
+
+    <div class="space space--xl"></div>
+  </section>
+
+
+  <!-- ========================================================
+       VI — THE BAZAAR STALL
+       Student organisations as market stalls.
+       ======================================================== -->
+  <section class="chapter" id="bazaar-stall" data-chapter="VI" data-name="The Bazaar Stall" data-pace="slow" aria-labelledby="h-bazaar">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-bazaar" data-reveal="fade">
+        <span class="chapter-mark__num mono">VI</span>
+        <span class="chapter-mark__name">The Bazaar Stall</span>
+      </h2>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat">
+      <p class="line" data-time="14:15">Every stall has a cause, a tablecloth and one very patient volunteer.</p>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <!-- the stall slides in from beyond the right edge of the screen -->
+    <div class="beat">
+      <figure class="photo r-4x3 bleed-right" data-photo="acmw-booth" data-reveal="wipe-left" data-drift="-56"
+              data-label="ACM-W booth photograph" data-spec="4 : 3 · 2400 × 1800 px">
+        <div class="photo__media" data-parallax="0.5"></div>
+      </figure>
+    </div>
+
+    <div class="space space--sm"></div>
+
+    <div class="beat">
+      <p class="line line--sm line--soft">Nothing here costs money. Everything costs an afternoon.</p>
+    </div>
+
+    <div class="space space--xl"></div>
+  </section>
+
+
+  <!-- ========================================================
+       VII — THE BULLETIN BOARD   (very quiet)
+       The smallest event becomes town news.
+       ======================================================== -->
+  <section class="chapter" id="bulletin-board" data-chapter="VII" data-name="The Bulletin Board" data-pace="slow" aria-labelledby="h-bulletin">
+    <div class="beat">
+      <h2 class="chapter-mark chapter-mark--center" id="h-bulletin" data-reveal="fade">
+        <span class="chapter-mark__num mono">VII</span>
+        <span class="chapter-mark__name">The Bulletin Board</span>
+      </h2>
+    </div>
+
+    <div class="space space--lg"></div>
+
+    <div class="beat beat--center">
+      <p class="line line--sm" data-time="15:20">Some notices are read by everyone.</p>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="pinned">
+      <span class="pin" aria-hidden="true"></span>
+      <figure class="photo r-4x5" data-photo="whiteboard-note" data-reveal="fade"
+              data-label="Whiteboard lost-and-found note photograph" data-spec="4 : 5 · 1600 × 2000 px">
+        <div class="photo__media"></div>
+      </figure>
+    </div>
+
+    <div class="space space--md"></div>
+
+    <div class="beat beat--center">
+      <p class="line line--sm line--soft line--it">Most of them are about someone’s missing umbrella.</p>
+    </div>
+
+    <div class="space space--xl"></div>
+  </section>
+
+
+  <!-- ========================================================
+       VIII — THE COLONNADE   (the atmospheric chapter)
+       Most whitespace in the story. A slow dissolve between two
+       photographs, then small images set far apart.
+       ======================================================== -->
+  <section class="chapter" id="colonnade" data-chapter="VIII" data-name="The Colonnade" data-pace="hush" aria-labelledby="h-colonnade">
+    <div class="beat">
+      <h2 class="chapter-mark" id="h-colonnade" data-reveal="fade">
+        <span class="chapter-mark__num mono">VIII</span>
+        <span class="chapter-mark__name">The Colonnade</span>
+      </h2>
+    </div>
+
+    <div class="space space--lg"></div>
+
+    <div class="beat">
+      <p class="line line--sm line--narrow" data-time="16:15">There are places in every town where nothing is supposed to happen.</p>
+    </div>
+
+    <div class="space space--xl"></div>
+
+    <div class="scene scene--dissolve" data-scene="sticky" data-time="16:40" data-time-at="0">
+      <div class="scene__stage">
+        <div class="dissolve">
+          <figure class="photo r-4x5 dissolve__a" data-photo="colonnade-arches"
+                  data-label="Colonnade arches photograph" data-spec="4 : 5 · 1600 × 2000 px">
+            <div class="photo__media"></div>
+          </figure>
+          <figure class="photo r-4x5 dissolve__b" data-photo="ivy-walls"
+                  data-label="Ivy-covered wall photograph" data-spec="4 : 5 · 1600 × 2000 px">
+            <div class="photo__media"></div>
+          </figure>
+          <p class="line line--sm line--scrub dissolve__line">The ivy has been here longer than the timetable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="space space--xxl"></div>
+
+    <div class="beat">
+      <div class="quiet quiet--left">
+        <figure class="photo r-3x2" data-photo="courtyard-walkway" data-reveal="fade"
+                data-label="Courtyard walkway photograph" data-spec="3 : 2 · 2100 × 1400 px">
+          <div class="photo__media" data-parallax="0.4"></div>
+        </figure>
+        <p class="line line--sm line--soft">Even the footsteps are quieter here.</p>
+      </div>
+    </div>
+
+    <div class="space space--xxl"></div>
+
+    <div class="beat">
+      <div class="quiet quiet--right">
+        <p class="line line--sm line--soft">Every town keeps one street for thinking.</p>
+        <figure class="photo r-2x3" data-photo="quiet-path" data-reveal="fade"
+                data-label="Quiet path photograph" data-spec="2 : 3 · 1400 × 2100 px">
+          <div class="photo__media" data-parallax="-0.4"></div>
+        </figure>
+      </div>
+    </div>
+
+    <div class="space space--xxl"></div>
+  </section>
+
+
+  <!-- ========================================================
+       IX — THE LAST BUS   (dusk: the page itself darkens)
+       ======================================================== -->
+  <section class="chapter chapter--dusk" id="last-bus" data-chapter="IX" data-name="The Last Bus" data-pace="slow" aria-labelledby="h-bus">
+
+    <!-- paper slowly becomes evening -->
+    <div class="dusk-fade" aria-hidden="true"></div>
+
+    <div class="dusk-body" data-tone="dark">
+
+      <div class="beat">
+        <h2 class="chapter-mark" id="h-bus" data-reveal="fade">
+          <span class="chapter-mark__num mono">IX</span>
+          <span class="chapter-mark__name">The Last Bus</span>
+        </h2>
+      </div>
+
+      <div class="space space--md"></div>
+
+      <div class="beat">
+        <p class="line" data-time="18:00">By six, the town starts putting itself away.</p>
+      </div>
+
+      <div class="space space--sm"></div>
+
+      <figure class="photo photo--dark r-tall" data-photo="group-trees" data-reveal="fade"
+              data-label="Group under trees photograph" data-spec="Full-bleed · 16 : 9 · 2560 × 1440 px">
+        <div class="photo__media" data-parallax="0.7"></div>
+      </figure>
+
+      <div class="space space--sm"></div>
+
+      <div class="beat beat--center">
+        <p class="line line--sm line--soft">Conversations become unfinished.</p>
+      </div>
+
+      <div class="space space--lg"></div>
+
+      <div class="beat">
+        <div class="evening-duo">
+          <figure class="photo photo--dark r-3x4" data-photo="golden-path" data-reveal="fade" data-drift="-26"
+                  data-label="Bags — golden-hour path photograph" data-spec="3 : 4 · 1800 × 2400 px">
+            <div class="photo__media" data-parallax="0.6"></div>
+          </figure>
+          <figure class="photo photo--dark r-3x4" data-photo="vans" data-reveal="fade" data-drift="26"
+                  data-label="Vans waiting photograph" data-spec="3 : 4 · 1800 × 2400 px">
+            <div class="photo__media" data-parallax="-0.6"></div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="space space--md"></div>
+
+      <div class="beat beat--center">
+        <p class="line line--sm" data-time="18:20">Bags return to shoulders.</p>
+      </div>
+      <div class="space space--sm"></div>
+      <div class="beat beat--center">
+        <p class="line">The vans are waiting.</p>
+      </div>
+      <div class="space space--sm"></div>
+      <div class="beat beat--center">
+        <p class="line line--sm line--soft line--it">Nobody says goodbye properly.</p>
+      </div>
+
+      <div class="space space--xl"></div>
+
+      <figure class="photo photo--dark photo--pan r-21x9 r-21x9--match" data-photo="golden-hour-wide" data-reveal="fade"
+              data-label="Golden-hour paths photograph" data-spec="21 : 9 · 2800 × 1200 px">
+        <div class="photo__media" data-pan="5"></div>
+      </figure>
+
+      <div class="space space--md"></div>
+
+      <div class="beat beat--right">
+        <p class="line line--sm">The light is always the last to leave.</p>
+      </div>
+
+      <div class="space space--lg"></div>
+
+      <div class="beat">
+        <figure class="photo photo--dark r-4x5 frame-small" data-photo="evening" data-reveal="fade"
+                data-label="Evening photograph" data-spec="4 : 5 · 1600 × 2000 px">
+          <div class="photo__media" data-parallax="0.5"></div>
+        </figure>
+      </div>
+
+      <div class="space space--xxl"></div>
+
+      <!-- ====================================================
+           ENDING — the iris closes back into a roundabout.
+           Mirrors the opening: morning was paper, night is dark.
+           While it plays, the town clock runs through the night
+           back to where the day began.
+           ==================================================== -->
+      <section class="ending scene" id="ending" data-scene="sticky" data-tone="dark" data-time="18:45" data-time-at="0" aria-label="Ending">
+        <div class="scene__stage ending__stage">
+
+          <div class="ending__iris">
+            <figure class="photo photo--dark photo--scrim r-full" data-photo="roundabout-evening"
+                    data-label="Roundabout at evening photograph" data-spec="Full-bleed · 16 : 9 · 2560 × 1440 px">
+              <div class="photo__media"></div>
+            </figure>
+            <p class="line line--scrub line--onphoto ending__line">From above, it looks exactly the same.</p>
+          </div>
+
+          <div class="ending__title">
+            <p class="ending__h" aria-hidden="true">
+              <span>If my university</span>
+              <span>was a small town</span>
+            </p>
+            <p class="ending__last line line--scrub">Tomorrow, it will start again.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /.dusk-body -->
+  </section>
+
+</main>
+
+<script src="js/photos.js" defer></script>
+<script src="js/script.js" defer></script>
+</body>
+</html>
