@@ -27,6 +27,7 @@
         frame.removeAttribute("aria-hidden");
       });
 
+      frame.style.aspectRatio = entry.ratio || "auto";
       img.src = entry.src;
     });
   }

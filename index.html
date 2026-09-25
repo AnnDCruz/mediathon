@@ -26,7 +26,6 @@
   <section class="opening scene" aria-labelledby="opening-title">
     <div class="scene__stage">
       <div class="opening__image photo photo--hero" data-photo="roundabout" data-priority aria-hidden="true"></div>
-
       <div class="opening__copy">
         <h1 id="opening-title">If My University Was a Small Town</h1>
         <div class="opening__narrative">
@@ -45,13 +44,14 @@
       <span class="section-number">Prologue</span>
       <h2 id="roundabout-title">The Roundabout</h2>
     </div>
-    <div class="story-grid">
+    <div class="story-stack story-stack--opening">
+      <div class="photo photo--natural reveal" data-photo="roundabout-detail" aria-hidden="true"></div>
       <div class="story-copy reveal">
         <p>Every town has a way in.</p>
         <p>Every day starts here,</p>
         <p>one way or another.</p>
       </div>
-      <div class="photo photo--portrait reveal" data-photo="roundabout-detail" aria-hidden="true"></div>
+      <div class="photo photo--natural photo--medium reveal" data-photo="car-parking" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -61,7 +61,7 @@
       <h2 id="gate-title">The Gate</h2>
     </div>
     <div class="story-grid story-grid--wide">
-      <div class="photo photo--landscape reveal" data-photo="gate" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="main-street" aria-hidden="true"></div>
       <div class="story-copy reveal">
         <p>You walk in,</p>
         <p>and the town makes sure you know exactly where you are.</p>
@@ -80,14 +80,15 @@
       <h2 id="market-title">The Canteen</h2>
     </div>
     <div class="story-stack">
-      <div class="story-copy reveal">
+      <div class="photo photo--natural reveal" data-photo="canteen-sign" aria-hidden="true"></div>
+      <div class="story-copy story-copy--narrow reveal">
         <p>The canteen has a reputation.</p>
         <p>Ask anyone who's been here longer than a semester</p>
         <p>and they'll tell you it used to be better.</p>
         <p>Somehow,</p>
         <p>everyone still ends up here.</p>
       </div>
-      <div class="photo photo--wide reveal" data-photo="canteen" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="canteen" aria-hidden="true"></div>
       <div class="story-copy story-copy--narrow reveal">
         <p>Fifteen minutes between classes</p>
         <p>and the line is still fifteen minutes long.</p>
@@ -114,8 +115,9 @@
         <p>half the town seems to know what happened</p>
         <p>before anyone actually says it.</p>
       </div>
-      <div class="photo photo--portrait reveal" data-photo="gathering-place" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="gathering-place" aria-hidden="true"></div>
     </div>
+    <div class="town-hall-secondary photo photo--natural reveal" data-photo="gathering-people" aria-hidden="true"></div>
   </section>
 
   <section class="chapter section" id="court" aria-labelledby="court-title">
@@ -131,7 +133,8 @@
         <p>Need a place to take a break in between of classes?</p>
         <p>You’ve come to the right place.</p>
       </div>
-      <div class="photo photo--cinema reveal" data-photo="court" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="court" aria-hidden="true"></div>
+      <div class="photo photo--natural photo--secondary reveal" data-photo="stadium" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -141,7 +144,7 @@
       <h2 id="steps-title">The Steps</h2>
     </div>
     <div class="story-grid">
-      <div class="photo photo--portrait reveal" data-photo="steps" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="steps" aria-hidden="true"></div>
       <div class="story-copy reveal">
         <p>Every town has a place</p>
         <p>where fifteen minutes quietly becomes an hour.</p>
@@ -155,6 +158,7 @@
         <p>when everyone already knows everyone.</p>
       </div>
     </div>
+    <div class="photo photo--natural photo--secondary reveal" data-photo="seating-area" aria-hidden="true"></div>
   </section>
 
   <section class="chapter section" id="stall" aria-labelledby="stall-title">
@@ -162,9 +166,9 @@
       <span class="section-number">VI — The Bazaar</span>
       <h2 id="stall-title">The Stall</h2>
     </div>
-    <div class="story-stack">
-      <div class="photo photo--wide reveal" data-photo="stall" aria-hidden="true"></div>
-      <div class="story-copy story-copy--narrow reveal">
+    <div class="story-grid story-grid--wide story-grid--stall">
+      <div class="photo photo--natural reveal" data-photo="stall" aria-hidden="true"></div>
+      <div class="story-copy reveal">
         <p>Every town has stalls.</p>
         <p>A tablecloth.</p>
         <p>Some lights.</p>
@@ -174,6 +178,7 @@
         <p>to see what's happening.</p>
       </div>
     </div>
+    <div class="photo photo--natural photo--secondary reveal" data-photo="food-stall" aria-hidden="true"></div>
   </section>
 
   <section class="chapter section" id="corner-shop" aria-labelledby="shop-title">
@@ -190,7 +195,7 @@
         <p>your financial decisions.</p>
         <p>The town gets you eventually.</p>
       </div>
-      <div class="photo photo--portrait reveal" data-photo="corner-shop" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="corner-shop" aria-hidden="true"></div>
     </div>
   </section>
 
@@ -206,7 +211,7 @@
         <p>The trees don't care about your deadline.</p>
         <p>Neither does the shade.</p>
       </div>
-      <div class="photo photo--cinema reveal" data-photo="colonnade" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="colonnade" aria-hidden="true"></div>
       <div class="story-copy story-copy--narrow reveal">
         <p>For a few minutes,</p>
         <p>there is nowhere you need to be.</p>
@@ -228,7 +233,7 @@
         <p>Not because the buses are late.</p>
         <p>Nobody is quite ready to leave yet.</p>
       </div>
-      <div class="photo photo--hero-small reveal" data-photo="last-bus" aria-hidden="true"></div>
+      <div class="photo photo--natural reveal" data-photo="last-bus" aria-hidden="true"></div>
       <div class="story-copy reveal">
         <p>The day gets debriefed here:</p>
         <p>Who bombed the quiz.</p>
@@ -240,6 +245,7 @@
         <p>Eventually,</p>
         <p>everyone goes home.</p>
       </div>
+      <div class="photo photo--natural photo--secondary reveal" data-photo="last-bus-wide" aria-hidden="true"></div>
     </div>
   </section>
 

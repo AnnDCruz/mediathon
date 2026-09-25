@@ -115,6 +115,8 @@ a { color: inherit; }
   overflow: hidden;
   background: #d6d1c6;
   isolation: isolate;
+  height: auto;
+  min-height: 0;
 }
 
 .photo::after {
@@ -137,21 +139,23 @@ a { color: inherit; }
 
 .photo--portrait {
   width: min(100%, 560px);
-  aspect-ratio: 4 / 5;
   justify-self: center;
 }
 
-.photo--landscape { aspect-ratio: 4 / 3; }
-.photo--wide { aspect-ratio: 16 / 9; }
-.photo--cinema { aspect-ratio: 21 / 9; }
-.photo--hero-small { aspect-ratio: 16 / 9; width: 100%; }
+.photo--landscape, .photo--wide, .photo--cinema, .photo--hero-small { width: 100%; }
 
 .photo img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   transition: transform 1.5s var(--ease);
+}
+
+.photo--hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .photo:hover img { transform: scale(1.02); }
@@ -323,6 +327,37 @@ a { color: inherit; }
 
 .scene.is-past .opening__image { transform: scale(1.025); }
 
+.photo--natural {
+  width: 100%;
+  aspect-ratio: auto;
+}
+
+.photo--natural img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.photo--medium {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.photo--secondary {
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+
+.town-hall-secondary {
+  width: min(100%, 1100px);
+  margin: clamp(5rem, 10vw, 10rem) auto 0;
+}
+
+.story-stack--opening > .story-copy {
+  width: min(100%, 42rem);
+  margin-inline: auto;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal {
@@ -398,7 +433,6 @@ a { color: inherit; }
     max-width: 28rem;
   }
 
-  .photo--cinema { aspect-ratio: 4 / 3; }
 }
 
 @media (max-width: 500px) {
@@ -426,5 +460,7 @@ a { color: inherit; }
   .story-stack--quiet { gap: 6rem; }
 
   .photo--wide,
-  .photo--cinema { aspect-ratio: 4 / 3; }
+  .photo--cinema {
+  width: 100%;
+}
 }
