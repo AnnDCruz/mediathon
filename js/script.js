@@ -1,36 +1,11 @@
 (function () {
   "use strict";
 
-  var root = document.documentElement;
   var body = document.body;
   var progress = document.querySelector(".site-header__progress span");
   var opening = document.querySelector(".opening");
   var closing = document.querySelector(".closing");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  function initPhotos() {
-    var manifest = window.TOWN_PHOTOS || {};
-    document.querySelectorAll("[data-photo]").forEach(function (frame) {
-      var key = frame.getAttribute("data-photo");
-      var entry = manifest[key];
-
-      if (!entry || !entry.src) return;
-
-      var img = new Image();
-      img.alt = entry.alt || "";
-      img.decoding = "async";
-      img.loading = frame.hasAttribute("data-priority") ? "eager" : "lazy";
-
-      img.addEventListener("load", function () {
-        frame.appendChild(img);
-        frame.classList.add("has-image");
-        frame.removeAttribute("aria-hidden");
-      });
-
-      frame.style.aspectRatio = entry.ratio || "auto";
-      img.src = entry.src;
-    });
-  }
 
   function initReveals() {
     var targets = document.querySelectorAll(".reveal");
@@ -62,7 +37,10 @@
     function update() {
       var max = document.documentElement.scrollHeight - window.innerHeight;
       var value = max > 0 ? window.scrollY / max : 0;
-      progress.style.width = (value * 100).toFixed(2) + "%";
+
+      if (progress) {
+        progress.style.width = (value * 100).toFixed(2) + "%";
+      }
 
       if (opening) {
         opening.classList.toggle("is-past", window.scrollY > window.innerHeight * 0.55);
@@ -70,7 +48,10 @@
 
       if (closing) {
         var rect = closing.getBoundingClientRect();
-        var active = rect.top < window.innerHeight * 0.65 && rect.bottom > window.innerHeight * 0.35;
+        var active =
+          rect.top < window.innerHeight * 0.65 &&
+          rect.bottom > window.innerHeight * 0.35;
+
         body.classList.toggle("is-evening", active);
       }
     }
@@ -80,6 +61,7 @@
     function schedule() {
       if (ticking) return;
       ticking = true;
+
       requestAnimationFrame(function () {
         ticking = false;
         update();
@@ -96,6 +78,7 @@
       link.addEventListener("click", function (event) {
         var target = document.querySelector(link.getAttribute("href"));
         if (!target) return;
+
         event.preventDefault();
         target.scrollIntoView({
           behavior: reduceMotion ? "auto" : "smooth",
@@ -106,7 +89,6 @@
   }
 
   function init() {
-    initPhotos();
     initReveals();
     initProgress();
     initSmoothAnchors();
