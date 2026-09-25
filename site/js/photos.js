@@ -18,7 +18,7 @@
 window.TOWN_PHOTOS = {
 
   /* — Prologue · The Roundabout — */
-  "roundabout":         { src: "", alt: "The campus roundabout seen from above, ringed by palms.", pos: "50% 50%" },
+  "roundabout":         { src: "images/roundabout.jpg", alt: "The campus roundabout seen from above, ringed by palms.", pos: "50% 50%" },
   "campus-surround":    { src: "", alt: "The buildings and paths surrounding the roundabout.", pos: "50% 50%" },
   "aerial-palms":       { src: "", alt: "Looking down over palm trees from an upper floor.", pos: "50% 50%" },
 
